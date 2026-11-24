@@ -39,9 +39,9 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.fontsource(),
-      name: 'Inter',
+      name: 'Lora',
       cssVariable: '--font-inter',
-      weights: ['100 900'],
+      weights: ['400 700'],
       styles: ['normal'],
       subsets: ['latin'],
       fallbacks: ['sans-serif'],
