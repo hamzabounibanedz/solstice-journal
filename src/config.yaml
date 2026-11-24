@@ -1,6 +1,6 @@
 site:
   name: Solstice Journal
-  site: 'https://solstice-journal.vercel.app'
+  site: 'http://localhost:4321'
   base: '/'
   trailingSlash: false
 

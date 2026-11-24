@@ -94,7 +94,10 @@ const getSite = (config: Config) => {
     googleSiteVerificationId: '',
   };
 
-  return merge({}, _default, config?.site ?? {}) as SiteConfig;
+  const site = merge({}, _default, config?.site ?? {}) as SiteConfig;
+  const productionDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  site.site = process.env.PUBLIC_SITE_URL || (productionDomain ? `https://${productionDomain}` : site.site);
+  return site;
 };
 
 const getMetadata = (config: Config) => {
